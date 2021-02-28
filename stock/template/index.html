@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>ML Prediction</title>
+
+
+    </head>
+    <!--Main CSS-->
+    <link rel="stylesheet" href='/static/css/style.css'>
+       
+    <body>
+        
+            <br>
+            <br><br><br><br><br>
+        
+        <div class="img"><h1>Stock Price Prediction</h1></div>
+        <div class="h2"><h2>Predict your Stocks Closing Price Here</h2></div>
+       
+        <h3>Please Enter Details Here:-</h3>
+        <form method="POST" action="Predict_stock">
+            {%csrf_token%}
+            <label for="Open">Open: </label><input id="Open" type="text" name="Open"><br><br> 
+            <label for="High">High: </label><input id="High" type="text" name="High"><br><br>
+            <label for="Low">Low: </label><input id="Low" type="text" name="Low"><br><br>
+            <input type="submit" name = "submit">
+            
+            
+        </form>
+        <br>
+        <h1><i><b>The Closing Price of Stock is:- {{Closeprice}}</b></i></h1>
+        
+    </body>
+</html>
